@@ -5,12 +5,12 @@
         <mat-icon>menu</mat-icon>
       </button>
       <span>
-        Mi tienda&nbsp;|&nbsp;By parzibyte
+        Presupuestro&nbsp;|&nbsp; ShootInPatagonia
       </span>
       <span class="example-fill-remaining-space"></span>
       <button mat-raised-button [matMenuTriggerFor]="menu">
         <span style="margin-right: 10px" [matBadge]="productos.length+''" matBadgeOverlap="false"
-              matBadgePosition="below after">Carrito de compras</span>
+              matBadgePosition="below after">Lista de presupuesto</span>
       </button>
       <mat-menu #menu="matMenu">
         <button mat-menu-item *ngFor="let p of productos;">{{p.nombre}}  {{p.precio | currency}}</button>
@@ -22,8 +22,8 @@
           Terminar compra</a>
       </mat-menu>
       <a style="margin-left: 10px" mat-raised-button color="primary"
-         href="https://parzibyte.me/blog/contrataciones-ayuda/" target="_blank">
-        Ayuda y soporte
+         href="https://shootinpatagonia.com/wp-content/uploads/2023/02/presentacion-Shoot-in-patgonia-v2.0.pdf" target="_blank">
+        Acerca de SHP
       </a>
     </mat-toolbar-row>
   </mat-toolbar>
@@ -33,21 +33,21 @@
         <p style="margin-left: 4px;">Administrador</p>
         <a mat-list-item routerLink="/productos">
           <mat-icon color="primary">list_alt</mat-icon>
-          Productos
+           gestor de locaciones
         </a>
         <a mat-list-item routerLink="/ventas">
           <mat-icon color="primary">local_shipping</mat-icon>
-          Ventas
+           cotizaciones hechas
         </a>
         <mat-divider></mat-divider>
         <p style="margin-left: 4px;">Cliente</p>
         <a mat-list-item routerLink="/tienda">
           <mat-icon color="primary">store</mat-icon>
-          Ver tienda
+           Ver locaciones
         </a>
         <mat-divider></mat-divider>
-        <a mat-list-item href="https://parzibyte.me/blog/" target="_blank">
-          Creado por Parzibyte
+        <a mat-list-item href="https://www.catarsis.cl" target="_blank">
+          Creado por Catarsis Films
         </a>
       </mat-nav-list>
     </mat-sidenav>

@@ -3,7 +3,7 @@
 
     <table *ngIf="productos.length>0" mat-table [dataSource]="productos">
       <ng-container matColumnDef="nombre">
-        <mat-header-cell *matHeaderCellDef>Producto</mat-header-cell>
+        <mat-header-cell *matHeaderCellDef>Locación</mat-header-cell>
         <mat-cell *matCellDef="let element"> {{element.nombre}}</mat-cell>
       </ng-container>
       <ng-container matColumnDef="descripcion">
@@ -51,15 +51,15 @@
       Volver
     </button>
     &nbsp;
-    <button (click)="revisarYTerminar(stepper)" mat-raised-button color="warn">Terminar compra
+    <button (click)="revisarYTerminar(stepper)" mat-raised-button color="warn">Terminar presupuesto
       <mat-icon>check</mat-icon>
     </button>
   </mat-step>
   <mat-step label="Gracias por su compra">
     <div *ngIf="compraTerminada">
-      <h2 class="mat-display-3">¡Gracias por su compra!</h2>
+      <h2 class="mat-display-3">¡Gracias por cotizar con ShootInPatagonia!</h2>
       <img src="assets/order-complete.png" alt="Compra terminada">
-      <p>Su paquete llegará a la dirección especificada en los siguientes días</p>
+      <p>Su presupuesto sera revisado dentro de 24hrs</p>
     </div>
     <div *ngIf="!compraTerminada">
       Por favor, rellene los formularios de los pasos anteriores
